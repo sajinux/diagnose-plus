@@ -1,0 +1,299 @@
+/* Services Page Styles */
+
+/* ===================================
+   Services Hero
+   =================================== */
+.services-hero {
+    background: var(--color-primary-gradient);
+    color: var(--color-white);
+    padding: var(--spacing-20) 0 var(--spacing-12);
+    margin-top: 70px;
+    text-align: center;
+}
+
+.services-hero h1 {
+    color: var(--color-white);
+    margin-bottom: var(--spacing-4);
+}
+
+.services-hero p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: var(--font-size-xl);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* ===================================
+   Service Detail Sections
+   =================================== */
+.service-detail {
+    padding: var(--spacing-20) 0;
+}
+
+.service-detail:nth-child(even) {
+    background: var(--color-gray-50);
+}
+
+.service-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-12);
+    align-items: center;
+}
+
+.service-text h2 {
+    margin-bottom: var(--spacing-4);
+}
+
+.service-text p {
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-relaxed);
+    margin-bottom: var(--spacing-6);
+}
+
+.service-features {
+    list-style: none;
+    margin-bottom: var(--spacing-6);
+}
+
+.service-features li {
+    display: flex;
+    align-items: start;
+    gap: var(--spacing-3);
+    margin-bottom: var(--spacing-3);
+    font-size: var(--font-size-lg);
+}
+
+.service-features li::before {
+    content: '✓';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: var(--color-success);
+    color: var(--color-white);
+    border-radius: 50%;
+    flex-shrink: 0;
+    font-weight: var(--font-weight-bold);
+}
+
+.service-image {
+    border-radius: var(--radius-2xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-2xl);
+}
+
+.service-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===================================
+   Process Section
+   =================================== */
+.process-section {
+    background: var(--color-white);
+    padding: var(--spacing-20) 0;
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-8);
+    margin-top: var(--spacing-12);
+}
+
+.process-step {
+    text-align: center;
+    position: relative;
+}
+
+.process-number {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto var(--spacing-4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-primary-gradient);
+    color: var(--color-white);
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    border-radius: 50%;
+    box-shadow: var(--shadow-lg);
+}
+
+.process-step h3 {
+    margin-bottom: var(--spacing-2);
+}
+
+.process-step p {
+    color: var(--color-gray-600);
+}
+
+/* ===================================
+   Pricing Section
+   =================================== */
+.pricing-section {
+    background: var(--color-gray-50);
+    padding: var(--spacing-20) 0;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-8);
+    margin-top: var(--spacing-12);
+}
+
+.pricing-card {
+    background: var(--color-white);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-8);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+    text-align: center;
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-2xl);
+}
+
+.pricing-card.featured {
+    background: var(--color-primary-gradient);
+    color: var(--color-white);
+    transform: scale(1.05);
+}
+
+.pricing-card.featured h3,
+.pricing-card.featured .pricing-price,
+.pricing-card.featured p {
+    color: var(--color-white);
+}
+
+.pricing-header {
+    margin-bottom: var(--spacing-6);
+}
+
+.pricing-card h3 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-2);
+}
+
+.pricing-price {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-extrabold);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-2);
+}
+
+.pricing-period {
+    color: var(--color-gray-500);
+    font-size: var(--font-size-sm);
+}
+
+.pricing-features {
+    list-style: none;
+    margin-bottom: var(--spacing-6);
+    text-align: left;
+}
+
+.pricing-features li {
+    padding: var(--spacing-2) 0;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+}
+
+.pricing-features li::before {
+    content: '✓';
+    color: var(--color-success);
+    font-weight: var(--font-weight-bold);
+}
+
+.pricing-card.featured .pricing-features li::before {
+    color: var(--color-white);
+}
+
+/* ===================================
+   CTA Section
+   =================================== */
+.cta-section {
+    background: var(--color-primary-gradient);
+    color: var(--color-white);
+    padding: var(--spacing-20) 0;
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-6);
+}
+
+.cta-title {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-extrabold);
+    color: var(--color-white);
+    margin: 0;
+}
+
+.cta-text {
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-relaxed);
+    color: rgba(255, 255, 255, 0.95);
+    margin: 0;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: var(--spacing-4) var(--spacing-8);
+    background: var(--color-white);
+    color: var(--color-primary);
+    text-decoration: none;
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    transition: all var(--transition-base);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+/* ===================================
+   Responsive Design
+   =================================== */
+@media (max-width: 768px) {
+    .service-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-8);
+    }
+
+    .service-content.reverse {
+        direction: ltr;
+    }
+
+    .process-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-card.featured {
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="si">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Join the Diagnose Plus partner network. Become a certified partner garage and grow your automotive business in Sri Lanka.">
+    <meta name="keywords" content="become partner, partner application, automotive business, Sri Lanka, garage network">
+
+    <title>Become a Partner - Diagnose Plus</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/forms.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="navbar-logo">Diagnose Plus</a>
+
+            <button class="navbar-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+             <ul class="navbar-menu">
+                <li><a href="index.html" class="navbar-link">Home</a></li>
+                <li><a href="dealer-locator.html" class="navbar-link">Find a Dealer </a></li>
+                <li><a href="services.html" class="navbar-link">Services</a></li>
+                <li><a href="blog.html" class="navbar-link">Blog</a></li>
+                <li><a href="become-partner.html" class="navbar-link">Become a Partner</a></li>
+                <li><a href="login.html" class="navbar-link" style="color: var(--color-primary); font-weight: 600;">🔐
+                        Partner Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Form Page -->
+    <div class="form-page">
+        <!-- Hero -->
+        <section class="form-hero">
+            <div class="container">
+                <h1>Become a Partner</h1>
+                <p>අපගේ island-wide network එකට එකතු වී ඔබගේ ව්‍යාපාරය වර්ධනය කරන්න</p>
+            </div>
+        </section>
+
+        <!-- Form Content -->
+        <section class="form-content">
+            <div class="container">
+                <div class="form-container">
+                    <!-- Form Steps Indicator -->
+                    <div class="form-steps">
+                        <div class="form-step active">
+                            <div class="step-number">1</div>
+                            <span class="step-label">Business Info</span>
+                        </div>
+                        <div class="form-step">
+                            <div class="step-number">2</div>
+                            <span class="step-label">Contact Details</span>
+                        </div>
+                        <div class="form-step">
+                            <div class="step-number">3</div>
+                            <span class="step-label">Services & Documents</span>
+                        </div>
+                    </div>
+
+                    <!-- Application Form -->
+                    <form id="partner-application-form">
+                        <!-- Step 1: Business Information -->
+                        <div id="step-1" class="form-section active">
+                            <h2 class="form-section-title">Business Information</h2>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label" for="business-name">Business Name *</label>
+                                    <input type="text" id="business-name" name="business-name" class="form-input"
+                                        required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label" for="business-reg">Business Registration Number *</label>
+                                    <input type="text" id="business-reg" name="business-reg" class="form-input"
+                                        required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label" for="district">District *</label>
+                                    <select id="district" name="district" class="form-select" required>
+                                        <option value="">Select District</option>
+                                        <option value="Colombo">Colombo</option>
+                                        <option value="Gampaha">Gampaha</option>
+                                        <option value="Kalutara">Kalutara</option>
+                                        <option value="Kandy">Kandy</option>
+                                        <option value="Matale">Matale</option>
+                                        <option value="Nuwara Eliya">Nuwara Eliya</option>
+                                        <option value="Galle">Galle</option>
+                                        <option value="Matara">Matara</option>
+                                        <option value="Hambantota">Hambantota</option>
+                                        <option value="Jaffna">Jaffna</option>
+                                        <option value="Kurunegala">Kurunegala</option>
+                                        <option value="Anuradhapura">Anuradhapura</option>
+                                        <option value="Badulla">Badulla</option>
+                                        <option value="Ratnapura">Ratnapura</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label" for="city">City *</label>
+                                    <input type="text" id="city" name="city" class="form-input" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row single">
+                                <div class="form-group">
+                                    <label class="form-label" for="address">Full Address *</label>
+                                    <textarea id="address" name="address" class="form-textarea" rows="3"
+                                        required></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label" for="years-operation">Years in Operation *</label>
+                                    <input type="number" id="years-operation" name="years-operation" class="form-input"
+                                        min="0" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label" for="staff-count">Number of Staff *</label>
+                                    <input type="number" id="staff-count" name="staff-count" class="form-input" min="1"
+                                        required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Contact Details -->
+                        <div id="step-2" class="form-section">
+                            <h2 class="form-section-title">Contact Details</h2>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label" for="owner-name">Owner/Manager Name *</label>
+                                    <input type="text" id="owner-name" name="owner-name" class="form-input" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label" for="position">Position *</label>
+                                    <input type="text" id="position" name="position" class="form-input" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label" for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" class="form-input" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label" for="phone">Phone Number *</label>
+                                    <input type="tel" id="phone" name="phone" class="form-input"
+                                        placeholder="+94 XX XXX XXXX" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label" for="whatsapp">WhatsApp Number</label>
+                                    <input type="tel" id="whatsapp" name="whatsapp" class="form-input"
+                                        placeholder="+94 XX XXX XXXX">
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label" for="website">Website (if any)</label>
+                                    <input type="url" id="website" name="website" class="form-input"
+                                        placeholder="https://example.com">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Services & Documents -->
+                        <div id="step-3" class="form-section">
+                            <h2 class="form-section-title">Services & Documents</h2>
+
+                            <div class="form-group">
+                                <label class="form-label">Services You Want to Offer *</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="services" value="Remote Diagnostics">
+                                        <div>
+                                            <strong>Remote Diagnostics</strong>
+                                            <p
+                                                style="font-size: var(--font-size-sm); color: var(--color-gray-600); margin: 0;">
+                                                Provide remote vehicle diagnostics services
+                                            </p>
+                                        </div>
+                                    </label>
+
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="services" value="Spare Parts">
+                                        <div>
+                                            <strong>Spare Parts</strong>
+                                            <p
+                                                style="font-size: var(--font-size-sm); color: var(--color-gray-600); margin: 0;">
+                                                Supply genuine automotive spare parts
+                                            </p>
+                                        </div>
+                                    </label>
+
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="services" value="Technical Training">
+                                        <div>
+                                            <strong>Technical Training</strong>
+                                            <p
+                                                style="font-size: var(--font-size-sm); color: var(--color-gray-600); margin: 0;">
+                                                Participate in technical training programs
+                                            </p>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Upload Business Registration Certificate *</label>
+                                <div class="file-upload">
+                                    <input type="file" name="certificate" accept=".pdf,.jpg,.jpeg,.png" required>
+                                    <div class="file-upload-icon">📄</div>
+                                    <div class="file-upload-text">Click to upload or drag and drop</div>
+                                    <div class="file-upload-hint">PDF, JPG, or PNG (Max 5MB)</div>
+                                </div>
+                            </div>
+
+                            <div class="form-row single">
+                                <div class="form-group">
+                                    <label class="form-label" for="additional-info">Additional Information</label>
+                                    <textarea id="additional-info" name="additional-info" class="form-textarea" rows="4"
+                                        placeholder="Tell us more about your business, equipment, certifications, etc."></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Success Message -->
+                        <div id="success-message" class="success-message">
+                            <div class="success-icon">✓</div>
+                            <h2>Application Submitted Successfully!</h2>
+                            <p>
+                                ඔබගේ අයදුම්පත සාර්ථකව ලැබී ඇත. අපගේ කණ්ඩායම ඉක්මනින් ඔබව සම්බන්ධ කර ගනු ඇත.
+                            </p>
+                            <a href="index.html" class="btn btn-primary btn-lg">Return to Home</a>
+                        </div>
+
+                        <!-- Form Navigation -->
+                        <div class="form-navigation">
+                            <button type="button" id="btn-prev" class="btn-prev" style="display: none;">
+                                ← Previous
+                            </button>
+                            <button type="button" id="btn-next" class="btn-next">
+                                Next →
+                            </button>
+                            <button type="button" id="btn-submit" class="btn-submit" style="display: none;">
+                                <span>📤</span> Submit Application
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Diagnose Plus</h4>
+                    <p style="color: var(--color-gray-400); line-height: var(--line-height-relaxed);">
+                        Leading Automotive Diagnostic Solutions in Sri Lanka
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="dealer-locator.html">Find a Partner</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="become-partner.html">Become a Partner</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#remote-diagnostics">Remote Diagnostics</a></li>
+                        <li><a href="services.html#spare-parts">Spare Parts</a></li>
+                        <li><a href="services.html#training">Technical Training</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li>📧 info@diagnoseplus.lk</li>
+                        <li>📱 +94 XX XXX XXXX</li>
+                        <li>💬 WhatsApp Support</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Diagnose Plus. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/forms.js"></script>
+</body>
+
+</html>

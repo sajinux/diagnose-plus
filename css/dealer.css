@@ -1,0 +1,399 @@
+/* Dealer Locator Page Styles */
+
+/* ===================================
+   Dealer Locator Layout
+   =================================== */
+.dealer-locator-page {
+    padding-top: 80px;
+    min-height: 100vh;
+    background: var(--color-gray-50);
+}
+
+.dealer-header {
+    background: var(--color-primary-gradient);
+    color: var(--color-white);
+    padding: var(--spacing-12) 0;
+    text-align: center;
+}
+
+.dealer-header h1 {
+    color: var(--color-white);
+    margin-bottom: var(--spacing-3);
+}
+
+.dealer-header p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: var(--font-size-lg);
+}
+
+.dealer-content {
+    padding: var(--spacing-8) 0;
+}
+
+.dealer-layout {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: var(--spacing-6);
+    align-items: start;
+}
+
+/* ===================================
+   Filters Sidebar
+   =================================== */
+.filters-sidebar {
+    background: var(--color-white);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-6);
+    box-shadow: var(--shadow-md);
+    position: sticky;
+    top: 100px;
+}
+
+.filters-title {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-5);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+}
+
+.filter-group {
+    margin-bottom: var(--spacing-5);
+}
+
+.filter-label {
+    display: block;
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-gray-700);
+    margin-bottom: var(--spacing-2);
+}
+
+.filter-select {
+    width: 100%;
+    padding: var(--spacing-3);
+    border: 2px solid var(--color-gray-200);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-base);
+    background: var(--color-white);
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
+}
+
+.filter-checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+}
+
+.filter-checkbox {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    cursor: pointer;
+}
+
+.filter-checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.clear-filters {
+    width: 100%;
+    padding: var(--spacing-3);
+    background: var(--color-gray-100);
+    color: var(--color-gray-700);
+    border: none;
+    border-radius: var(--radius-md);
+    font-weight: var(--font-weight-medium);
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.clear-filters:hover {
+    background: var(--color-gray-200);
+}
+
+/* ===================================
+   Map and Results
+   =================================== */
+.map-results-container {
+    background: var(--color-white);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.map-container {
+    width: 100%;
+    height: 500px;
+    background: var(--color-gray-100);
+    position: relative;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+.map-loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--color-gray-500);
+}
+
+.results-header {
+    padding: var(--spacing-5) var(--spacing-6);
+    border-bottom: 1px solid var(--color-gray-200);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.results-count {
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-gray-700);
+}
+
+.view-toggle {
+    display: flex;
+    gap: var(--spacing-2);
+}
+
+.view-btn {
+    padding: var(--spacing-2) var(--spacing-3);
+    background: var(--color-gray-100);
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.view-btn.active {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+/* ===================================
+   Partner Cards
+   =================================== */
+.partners-list {
+    padding: var(--spacing-6);
+    display: grid;
+    gap: var(--spacing-4);
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.partner-card {
+    background: var(--color-white);
+    border: 2px solid var(--color-gray-100);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-5);
+    transition: all var(--transition-base);
+    cursor: pointer;
+}
+
+.partner-card:hover {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-md);
+    transform: translateX(4px);
+}
+
+.partner-card.active {
+    border-color: var(--color-primary);
+    background: linear-gradient(to right, rgba(33, 150, 243, 0.05), transparent);
+}
+
+.partner-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: var(--spacing-3);
+}
+
+.partner-name {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-gray-900);
+    margin-bottom: var(--spacing-1);
+}
+
+.partner-rating {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-1);
+    color: var(--color-warning);
+    font-size: var(--font-size-sm);
+}
+
+.partner-badge {
+    background: var(--color-primary-gradient);
+    color: var(--color-white);
+    padding: var(--spacing-1) var(--spacing-3);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+}
+
+.partner-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+    margin-bottom: var(--spacing-4);
+}
+
+.partner-info-item {
+    display: flex;
+    align-items: start;
+    gap: var(--spacing-2);
+    color: var(--color-gray-600);
+    font-size: var(--font-size-sm);
+}
+
+.partner-info-item span:first-child {
+    flex-shrink: 0;
+}
+
+.partner-services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-2);
+    margin-bottom: var(--spacing-4);
+}
+
+.service-tag {
+    background: var(--color-gray-100);
+    color: var(--color-gray-700);
+    padding: var(--spacing-1) var(--spacing-3);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+}
+
+.partner-actions {
+    display: flex;
+    gap: var(--spacing-2);
+}
+
+.partner-btn {
+    flex: 1;
+    padding: var(--spacing-2) var(--spacing-4);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-1);
+}
+
+.partner-btn-primary {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.partner-btn-primary:hover {
+    background: var(--color-primary-dark);
+}
+
+.partner-btn-secondary {
+    background: var(--color-gray-100);
+    color: var(--color-gray-700);
+}
+
+.partner-btn-secondary:hover {
+    background: var(--color-gray-200);
+}
+
+/* ===================================
+   Map Info Window
+   =================================== */
+.map-info-window {
+    padding: var(--spacing-2);
+    min-width: 200px;
+}
+
+.map-info-window h3 {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-2);
+}
+
+.map-info-window p {
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--spacing-1);
+}
+
+/* ===================================
+   Empty State
+   =================================== */
+.empty-state {
+    text-align: center;
+    padding: var(--spacing-12) var(--spacing-6);
+    color: var(--color-gray-500);
+}
+
+.empty-state-icon {
+    font-size: var(--font-size-6xl);
+    margin-bottom: var(--spacing-4);
+}
+
+.empty-state h3 {
+    color: var(--color-gray-700);
+    margin-bottom: var(--spacing-2);
+}
+
+/* ===================================
+   Responsive Design
+   =================================== */
+@media (max-width: 1024px) {
+    .dealer-layout {
+        grid-template-columns: 300px 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .dealer-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .filters-sidebar {
+        position: static;
+        margin-bottom: var(--spacing-6);
+    }
+
+    .map-container {
+        height: 400px;
+    }
+
+    .partners-list {
+        max-height: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .dealer-header {
+        padding: var(--spacing-8) 0;
+    }
+
+    .partner-actions {
+        flex-direction: column;
+    }
+
+    .partner-btn {
+        width: 100%;
+    }
+}

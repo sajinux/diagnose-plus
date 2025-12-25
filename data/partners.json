@@ -1,0 +1,166 @@
+{
+  "partners": [
+    {
+      "id": 1,
+      "name": "Auto Care Center - Colombo",
+      "district": "Colombo",
+      "city": "Colombo 07",
+      "address": "123 Galle Road, Colombo 07",
+      "phone": "+94 11 234 5678",
+      "email": "colombo@autocare.lk",
+      "coordinates": {
+        "lat": 6.9271,
+        "lng": 79.8612
+      },
+      "services": [
+        "Remote Diagnostics",
+        "Spare Parts",
+        "Technical Training"
+      ],
+      "hours": "Mon-Sat: 8:00 AM - 6:00 PM",
+      "rating": 4.8
+    },
+    {
+      "id": 2,
+      "name": "Tech Motors - Kandy",
+      "district": "Kandy",
+      "city": "Kandy",
+      "address": "456 Peradeniya Road, Kandy",
+      "phone": "+94 81 234 5678",
+      "email": "kandy@techmotors.lk",
+      "coordinates": {
+        "lat": 7.2906,
+        "lng": 80.6337
+      },
+      "services": [
+        "Remote Diagnostics",
+        "Spare Parts"
+      ],
+      "hours": "Mon-Sat: 8:30 AM - 5:30 PM",
+      "rating": 4.6
+    },
+    {
+      "id": 3,
+      "name": "Precision Auto - Galle",
+      "district": "Galle",
+      "city": "Galle",
+      "address": "789 Matara Road, Galle",
+      "phone": "+94 91 234 5678",
+      "email": "galle@precisionauto.lk",
+      "coordinates": {
+        "lat": 6.0535,
+        "lng": 80.2210
+      },
+      "services": [
+        "Remote Diagnostics",
+        "Technical Training"
+      ],
+      "hours": "Mon-Fri: 9:00 AM - 5:00 PM",
+      "rating": 4.7
+    },
+    {
+      "id": 4,
+      "name": "Elite Diagnostics - Negombo",
+      "district": "Gampaha",
+      "city": "Negombo",
+      "address": "321 Colombo Road, Negombo",
+      "phone": "+94 31 234 5678",
+      "email": "negombo@elitediag.lk",
+      "coordinates": {
+        "lat": 7.2008,
+        "lng": 79.8358
+      },
+      "services": [
+        "Remote Diagnostics",
+        "Spare Parts",
+        "Technical Training"
+      ],
+      "hours": "Mon-Sat: 8:00 AM - 6:00 PM",
+      "rating": 4.9
+    },
+    {
+      "id": 5,
+      "name": "Smart Auto Solutions - Kurunegala",
+      "district": "Kurunegala",
+      "city": "Kurunegala",
+      "address": "654 Dambulla Road, Kurunegala",
+      "phone": "+94 37 234 5678",
+      "email": "kurunegala@smartauto.lk",
+      "coordinates": {
+        "lat": 7.4863,
+        "lng": 80.3623
+      },
+      "services": [
+        "Remote Diagnostics",
+        "Spare Parts"
+      ],
+      "hours": "Mon-Sat: 8:30 AM - 5:30 PM",
+      "rating": 4.5
+    },
+    {
+      "id": 6,
+      "name": "Pro Tech Garage - Jaffna",
+      "district": "Jaffna",
+      "city": "Jaffna",
+      "address": "987 Point Pedro Road, Jaffna",
+      "phone": "+94 21 234 5678",
+      "email": "jaffna@protech.lk",
+      "coordinates": {
+        "lat": 9.6615,
+        "lng": 80.0255
+      },
+      "services": [
+        "Remote Diagnostics",
+        "Technical Training"
+      ],
+      "hours": "Mon-Fri: 9:00 AM - 5:00 PM",
+      "rating": 4.6
+    },
+    {
+      "id": 7,
+      "name": "Pioneer Electricals - Kururnegala",
+      "district": "Kurunegala",
+      "city": "Kurunegala",
+      "address": "Wehera Junction, 281 Colombo Road, Kurunegala 60000",
+      "phone": "+94 37 469 8642",
+      "email": "pioneer@electric.lk",
+      "coordinates": {
+        "lat": 7.4731,
+        "lng": 80.3512
+      },
+      "services": [
+        "Remote Diagnostics",
+        "Technical Training"
+      ],
+      "hours": "Mon-Fri: 8:30 AM - 5:30 PM",
+      "rating": 4.4
+    }
+  ],
+  "districts": [
+    "Colombo",
+    "Gampaha",
+    "Kalutara",
+    "Kandy",
+    "Matale",
+    "Nuwara Eliya",
+    "Galle",
+    "Matara",
+    "Hambantota",
+    "Jaffna",
+    "Kilinochchi",
+    "Mannar",
+    "Vavuniya",
+    "Mullaitivu",
+    "Batticaloa",
+    "Ampara",
+    "Trincomalee",
+    "Kurunegala",
+    "Puttalam",
+    "Anuradhapura",
+    "Polonnaruwa",
+    "Badulla",
+    "Monaragala",
+    "Ratnapura",
+    "Kegalle"
+  ]
+}

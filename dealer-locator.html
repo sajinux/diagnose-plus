@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="si">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Find certified Diagnose Plus partner garages near you across Sri Lanka. Island-wide network of expert automotive technicians.">
+    <meta name="keywords" content="dealer locator, partner garages, Sri Lanka, vehicle repair, automotive service">
+
+    <title>Find a Partner - Diagnose Plus</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/dealer.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="navbar-logo">Diagnose Plus</a>
+
+            <button class="navbar-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+             <ul class="navbar-menu">
+                <li><a href="index.html" class="navbar-link">Home</a></li>
+                <li><a href="dealer-locator.html" class="navbar-link">Find a Dealer </a></li>
+                <li><a href="services.html" class="navbar-link">Services</a></li>
+                <li><a href="blog.html" class="navbar-link">Blog</a></li>
+                <li><a href="become-partner.html" class="navbar-link">Become a Partner</a></li>
+                <li><a href="login.html" class="navbar-link" style="color: var(--color-primary); font-weight: 600;">🔐
+                        Partner Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Dealer Locator Page -->
+    <div class="dealer-locator-page">
+        <!-- Header -->
+        <section class="dealer-header">
+            <div class="container">
+                <h1>Find a Partner Near You</h1>
+                <p>Discover certified partner garages near you</p>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <section class="dealer-content">
+            <div class="container">
+                <div class="dealer-layout">
+                    <!-- Filters Sidebar -->
+                    <aside class="filters-sidebar">
+                        <h3 class="filters-title">
+                            <span>🔍</span>
+                            Filter Partners
+                        </h3>
+
+                        <!-- District Filter -->
+                        <div class="filter-group">
+                            <label class="filter-label" for="district-filter">
+                                Select District
+                            </label>
+                            <select id="district-filter" class="filter-select">
+                                <option value="">All Districts</option>
+                                <!-- Options populated by JavaScript -->
+                            </select>
+                        </div>
+
+                        <!-- Services Filter -->
+                        <div class="filter-group">
+                            <label class="filter-label">
+                                Services Offered
+                            </label>
+                            <div class="filter-checkboxes">
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" class="service-filter" value="Remote Diagnostics">
+                                    <span>Remote Diagnostics</span>
+                                </label>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" class="service-filter" value="Spare Parts">
+                                    <span>Spare Parts</span>
+                                </label>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" class="service-filter" value="Technical Training">
+                                    <span>Technical Training</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Clear Filters -->
+                        <button id="clear-filters" class="clear-filters">
+                            Clear All Filters
+                        </button>
+                    </aside>
+
+                    <!-- Map and Results -->
+                    <div class="map-results-container">
+                        <!-- Map -->
+                        <div class="map-container">
+                            <div id="map"></div>
+                        </div>
+
+                        <!-- Results Header -->
+                        <div class="results-header">
+                            <span id="results-count" class="results-count">Loading...</span>
+                        </div>
+
+                        <!-- Partners List -->
+                        <div id="partners-list" class="partners-list">
+                            <div class="map-loading">Loading partners...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Diagnose Plus</h4>
+                    <p style="color: var(--color-gray-400); line-height: var(--line-height-relaxed);">
+                        Leading Automotive Diagnostic Solutions in Sri Lanka
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="dealer-locator.html">Find a Partner</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="become-partner.html">Become a Partner</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#remote-diagnostics">Remote Diagnostics</a></li>
+                        <li><a href="services.html#spare-parts">Spare Parts</a></li>
+                        <li><a href="services.html#training">Technical Training</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li>📧 info@diagnoseplus.lk</li>
+                        <li>📱 +94 XX XXX XXXX</li>
+                        <li>💬 WhatsApp Support</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Diagnose Plus. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/config.js?v=1.0.1"></script>
+    <script src="js/main.js?v=1.0.1"></script>
+    <script src="js/dealer-locator.js?v=1.0.1"></script>
+
+    <!-- Google Maps API -->
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBT2ceqceG-db5LSDMy5Snhb3QLoec9e3s&callback=initMap">
+        </script>
+</body>
+
+</html>

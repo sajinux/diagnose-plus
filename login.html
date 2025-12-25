@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Login to your Diagnose Plus partner account. Access your dashboard and manage your automotive business.">
+    <meta name="keywords" content="login, partner login, diagnose plus, automotive business">
+
+    <title>Partner Login - Diagnose Plus</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/auth.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="navbar-logo">Diagnose Plus</a>
+
+            <button class="navbar-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="navbar-menu">
+                <li><a href="index.html" class="navbar-link">Home</a></li>
+                <li><a href="dealer-locator.html" class="navbar-link">Find a Dealer </a></li>
+                <li><a href="services.html" class="navbar-link">Services</a></li>
+                <li><a href="blog.html" class="navbar-link">Blog</a></li>
+                <li><a href="become-partner.html" class="navbar-link">Become a Partner</a></li>
+                <li><a href="login.html" class="navbar-link" style="color: var(--color-primary); font-weight: 600;">🔐
+                        Partner Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Login Page -->
+    <div class="auth-page">
+        <div class="auth-container">
+            <div class="auth-card">
+                <!-- Logo/Header -->
+                <div class="auth-header">
+                    <div class="auth-logo">🔧</div>
+                    <h1>Partner Login</h1>
+                    <p>Access your Diagnose Plus partner dashboard</p>
+                </div>
+
+                <!-- Login Form -->
+                <form id="login-form" class="auth-form">
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="partner@example.com"
+                            required autofocus>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="password">Password</label>
+                        <input type="password" id="password" name="password" class="form-input"
+                            placeholder="Enter your password" required>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="remember" id="remember">
+                            <span>Remember me</span>
+                        </label>
+                        <a href="#" class="link-text">Forgot password?</a>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-lg btn-block" id="login-btn">
+                        <span>🔐</span> Login
+                    </button>
+
+                    <div class="auth-divider">
+                        <span>New to Diagnose Plus?</span>
+                    </div>
+
+                    <a href="become-partner.html" class="btn btn-outline btn-lg btn-block">
+                        <span>📝</span> Register as Partner
+                    </a>
+                </form>
+
+                <!-- Error/Success Messages -->
+                <div id="auth-message" class="auth-message" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Diagnose Plus</h4>
+                    <p style="color: var(--color-gray-400); line-height: var(--line-height-relaxed);">
+                        Leading Automotive Diagnostic Solutions in Sri Lanka
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="dealer-locator.html">Find a Partner</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="become-partner.html">Become a Partner</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#remote-diagnostics">Remote Diagnostics</a></li>
+                        <li><a href="services.html#spare-parts">Spare Parts</a></li>
+                        <li><a href="services.html#training">Technical Training</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li>📧 info@diagnoseplus.lk</li>
+                        <li>📱 +94 XX XXX XXXX</li>
+                        <li>💬 WhatsApp Support</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Diagnose Plus. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="si">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Latest news, tips, and insights about vehicle maintenance and automotive technology in Sri Lanka.">
+    <meta name="keywords" content="automotive blog, vehicle maintenance, car tips, Sri Lanka, automotive technology">
+
+    <title>Blog & Knowledge Base - Diagnose Plus</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+
+    <style>
+        .blog-page {
+            padding-top: 80px;
+            min-height: 100vh;
+        }
+
+        .blog-hero {
+            background: var(--color-primary-gradient);
+            color: var(--color-white);
+            padding: var(--spacing-12) 0;
+            text-align: center;
+        }
+
+        .blog-hero h1 {
+            color: var(--color-white);
+            margin-bottom: var(--spacing-3);
+        }
+
+        .blog-hero p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: var(--font-size-lg);
+        }
+
+        .blog-content {
+            padding: var(--spacing-12) 0;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: var(--spacing-8);
+        }
+
+        .blog-card {
+            background: var(--color-white);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-base);
+        }
+
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 200px;
+            background: var(--color-gray-200);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--font-size-5xl);
+        }
+
+        .blog-body {
+            padding: var(--spacing-6);
+        }
+
+        .blog-meta {
+            display: flex;
+            gap: var(--spacing-4);
+            margin-bottom: var(--spacing-3);
+            font-size: var(--font-size-sm);
+            color: var(--color-gray-500);
+        }
+
+        .blog-category {
+            background: var(--color-primary-gradient);
+            color: var(--color-white);
+            padding: var(--spacing-1) var(--spacing-3);
+            border-radius: var(--radius-full);
+            font-size: var(--font-size-xs);
+            font-weight: var(--font-weight-semibold);
+            display: inline-block;
+            margin-bottom: var(--spacing-3);
+        }
+
+        .blog-title {
+            font-size: var(--font-size-xl);
+            font-weight: var(--font-weight-bold);
+            margin-bottom: var(--spacing-3);
+            color: var(--color-gray-900);
+        }
+
+        .blog-excerpt {
+            color: var(--color-gray-600);
+            line-height: var(--line-height-relaxed);
+            margin-bottom: var(--spacing-4);
+        }
+
+        .blog-link {
+            color: var(--color-primary);
+            font-weight: var(--font-weight-semibold);
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-2);
+            transition: gap var(--transition-fast);
+        }
+
+        .blog-link:hover {
+            gap: var(--spacing-3);
+        }
+
+        .coming-soon {
+            text-align: center;
+            padding: var(--spacing-20) 0;
+            color: var(--color-gray-500);
+        }
+
+        .coming-soon-icon {
+            font-size: var(--font-size-6xl);
+            margin-bottom: var(--spacing-4);
+        }
+
+        /* Modal Styles */
+        .blog-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            overflow-y: auto;
+            backdrop-filter: blur(5px);
+            padding: var(--spacing-10) var(--spacing-4);
+        }
+
+        .blog-modal.active {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .modal-content {
+            background: var(--color-white);
+            width: 100%;
+            max-width: 800px;
+            border-radius: var(--radius-2xl);
+            position: relative;
+            padding: var(--spacing-10);
+            box-shadow: var(--shadow-2xl);
+            animation: modalFadeIn 0.3s ease-out;
+            margin-bottom: var(--spacing-10);
+        }
+
+        @keyframes modalFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: var(--spacing-4);
+            right: var(--spacing-4);
+            background: var(--color-gray-100);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: var(--font-size-lg);
+            color: var(--color-gray-600);
+            transition: all var(--transition-base);
+        }
+
+        .modal-close:hover {
+            background: var(--color-gray-200);
+            transform: rotate(90deg);
+        }
+
+        .modal-header {
+            margin-bottom: var(--spacing-6);
+        }
+
+        .modal-emoji {
+            font-size: 80px;
+            margin-bottom: var(--spacing-4);
+            display: block;
+        }
+
+        .modal-body {
+            line-height: var(--line-height-relaxed);
+            color: var(--color-gray-700);
+            font-size: var(--font-size-lg);
+        }
+
+        .modal-body p {
+            margin-bottom: var(--spacing-4);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="navbar-logo">Diagnose Plus</a>
+
+            <button class="navbar-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+             <ul class="navbar-menu">
+                <li><a href="index.html" class="navbar-link">Home</a></li>
+                <li><a href="dealer-locator.html" class="navbar-link">Find a Dealer </a></li>
+                <li><a href="services.html" class="navbar-link">Services</a></li>
+                <li><a href="blog.html" class="navbar-link">Blog</a></li>
+                <li><a href="become-partner.html" class="navbar-link">Become a Partner</a></li>
+                <li><a href="login.html" class="navbar-link" style="color: var(--color-primary); font-weight: 600;">🔐
+                        Partner Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Blog Page -->
+    <div class="blog-page">
+        <!-- Hero -->
+        <section class="blog-hero">
+            <div class="container">
+                <h1>Blog & Knowledge Base</h1>
+                <p>Expert articles and tips on vehicle maintenance and the latest automotive technologies.</p>
+            </div>
+        </section>
+
+        <!-- Blog Content -->
+        <section class="blog-content">
+            <div class="container">
+                <div class="blog-grid" id="blog-grid">
+                    <!-- Dynamic Grid Content -->
+                </div>
+
+                <!-- Coming Soon Message -->
+                <div class="coming-soon">
+                    <div class="coming-soon-icon">📝</div>
+                    <h2>More Articles Coming Soon!</h2>
+                    <p style="font-size: var(--font-size-lg); margin-top: var(--spacing-4);">
+                        We’re adding more articles very soon. Stay tuned!
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Blog Modal -->
+    <div class="blog-modal" id="blog-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <div class="modal-header">
+                <span id="modal-emoji" class="modal-emoji"></span>
+                <span id="modal-category" class="blog-category"></span>
+                <h2 id="modal-title" class="blog-title" style="font-size: var(--font-size-3xl);"></h2>
+                <div class="blog-meta">
+                    <span id="modal-date"></span>
+                    <span id="modal-author"></span>
+                </div>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Post Content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Diagnose Plus</h4>
+                    <p style="color: var(--color-gray-400); line-height: var(--line-height-relaxed);">
+                        Leading Automotive Diagnostic Solutions in Sri Lanka
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="dealer-locator.html">Find a Partner</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="become-partner.html">Become a Partner</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#remote-diagnostics">Remote Diagnostics</a></li>
+                        <li><a href="services.html#spare-parts">Spare Parts</a></li>
+                        <li><a href="services.html#training">Technical Training</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li>📧 info@diagnoseplus.lk</li>
+                        <li>📱 +94 XX XXX XXXX</li>
+                        <li>💬 WhatsApp Support</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Diagnose Plus. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/blog.js"></script>
+</body>
+
+</html>
