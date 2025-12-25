@@ -1,7 +1,7 @@
 // Configuration for Diagnose Plus Web Application
 const CONFIG = {
     // Backend API Base URL
-    API_BASE_URL: 'http://localhost:3000',
+    API_BASE_URL: 'https://diagnose-plus-api.onrender.com',
 
     // Google Maps API Key - Replace with your actual key
     // Get your key from: https://console.cloud.google.com/
