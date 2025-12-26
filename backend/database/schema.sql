@@ -249,7 +249,7 @@ GROUP BY partner_id;
 -- =============================================
 
 -- Grant permissions to application user
--- CREATE USER diagnose_app WITH PASSWORD 'your_secure_password';
+ --CREATE USER diagnose_app WITH PASSWORD 'your_secure_password';
 -- GRANT CONNECT ON DATABASE diagnose_plus TO diagnose_app;
 -- GRANT USAGE ON SCHEMA public TO diagnose_app;
 -- GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public TO diagnose_app;
