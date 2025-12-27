@@ -652,3 +652,119 @@ p {
     text-align: center;
     color: var(--color-gray-500);
 }
+/* ===================================
+   WhatsApp Floating Button
+   =================================== */
+.whatsapp-button {
+    position: fixed;
+    bottom: var(--spacing-8);
+    right: var(--spacing-6);
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #25D366, #20BA5A);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: var(--shadow-xl);
+    z-index: 999;
+    transition: all var(--transition-base);
+    text-decoration: none;
+    border: none;
+    font-size: 28px;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 20px 30px rgba(37, 211, 102, 0.4);
+}
+
+.whatsapp-button:active {
+    transform: scale(0.95);
+}
+
+/* WhatsApp Tooltip Menu */
+.whatsapp-menu {
+    position: fixed;
+    bottom: 90px;
+    right: var(--spacing-6);
+    background: var(--color-white);
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-2xl);
+    overflow: hidden;
+    max-width: 250px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px) scale(0.95);
+    transition: all var(--transition-base);
+    z-index: 998;
+}
+
+.whatsapp-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+.whatsapp-menu-header {
+    background: linear-gradient(135deg, #25D366, #20BA5A);
+    color: white;
+    padding: var(--spacing-4);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-sm);
+    text-align: center;
+}
+
+.whatsapp-menu-item {
+    padding: var(--spacing-3) var(--spacing-4);
+    border-bottom: 1px solid var(--color-gray-100);
+    cursor: pointer;
+    transition: background var(--transition-fast);
+    font-size: var(--font-size-sm);
+    color: var(--color-gray-700);
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+}
+
+.whatsapp-menu-item:last-child {
+    border-bottom: none;
+}
+
+.whatsapp-menu-item:hover {
+    background: var(--color-gray-50);
+    padding-left: var(--spacing-5);
+}
+
+@media (max-width: 768px) {
+    .whatsapp-button {
+        width: 55px;
+        height: 55px;
+        bottom: var(--spacing-6);
+        right: var(--spacing-4);
+        font-size: 24px;
+    }
+    
+    .whatsapp-menu {
+        right: var(--spacing-4);
+        max-width: 220px;
+    }
+}
+
+@media (max-width: 480px) {
+    .whatsapp-button {
+        width: 50px;
+        height: 50px;
+        bottom: var(--spacing-4);
+        right: var(--spacing-3);
+        font-size: 22px;
+    }
+    
+    .whatsapp-menu {
+        right: var(--spacing-3);
+        max-width: 200px;
+    }
+}
