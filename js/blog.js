@@ -43,7 +43,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         blogGrid.innerHTML = posts.map(post => `
             <article class="blog-card">
-                <div class="blog-image">${post.image_emoji}</div>
+                <div class="blog-image">
+                    <img src="${post.image_emoji}" alt="${post.title}" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
                 <div class="blog-body">
                     <span class="blog-category">${post.category}</span>
                     <h2 class="blog-title">${post.title}</h2>
@@ -78,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (result.success) {
                 const post = result.data;
 
-                modalEmoji.textContent = post.image_emoji;
+                modalEmoji.innerHTML = `<img src="${post.image_emoji}" alt="${post.title}" style="width: 100%; max-height: 300px; object-fit: cover; border-radius: 8px;">`;
                 modalCategory.textContent = post.category;
                 modalTitle.textContent = post.title;
                 modalDate.textContent = `📅 ${formatDate(post.created_at)}`;
