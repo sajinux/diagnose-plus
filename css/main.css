@@ -659,24 +659,33 @@ p {
     position: fixed;
     bottom: var(--spacing-8);
     right: var(--spacing-6);
-    width: 60px;
-    height: 60px;
+    min-width: 240px;
+    padding: var(--spacing-3) var(--spacing-5);
     background: linear-gradient(135deg, #25D366, #20BA5A);
-    border-radius: 50%;
+    border-radius: var(--radius-full);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    gap: var(--spacing-3);
     cursor: pointer;
     box-shadow: var(--shadow-xl);
     z-index: 999;
     transition: all var(--transition-base);
     text-decoration: none;
     border: none;
-    font-size: 28px;
+    font-size: 18px;
+    color: white;
+    font-weight: var(--font-weight-semibold);
+    white-space: nowrap;
+}
+
+.whatsapp-text {
+    font-size: var(--font-size-sm);
+    flex: 1;
 }
 
 .whatsapp-button:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     box-shadow: 0 20px 30px rgba(37, 211, 102, 0.4);
 }
 
@@ -684,10 +693,34 @@ p {
     transform: scale(0.95);
 }
 
+/* WhatsApp Menu Toggle Button - Inside button */
+.whatsapp-menu-toggle {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    width: auto;
+    height: auto;
+    background: none;
+    border: none;
+    box-shadow: none;
+    z-index: auto;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    transition: transform var(--transition-fast);
+    padding: 0;
+    margin: 0;
+}
+
+.whatsapp-menu-toggle:hover {
+    transform: rotate(90deg);
+}
+
 /* WhatsApp Tooltip Menu */
 .whatsapp-menu {
     position: fixed;
-    bottom: 90px;
+    bottom: 100px;
     right: var(--spacing-6);
     background: var(--color-white);
     border-radius: var(--radius-2xl);
@@ -728,6 +761,7 @@ p {
     text-align: left;
     background: none;
     border: none;
+    text-decoration: none;
 }
 
 .whatsapp-menu-item:last-child {
@@ -741,30 +775,42 @@ p {
 
 @media (max-width: 768px) {
     .whatsapp-button {
-        width: 55px;
-        height: 55px;
+        min-width: 200px;
+        padding: var(--spacing-2) var(--spacing-4);
+        font-size: 15px;
         bottom: var(--spacing-6);
         right: var(--spacing-4);
-        font-size: 24px;
+    }
+    
+    .whatsapp-text {
+        font-size: 12px;
     }
     
     .whatsapp-menu {
         right: var(--spacing-4);
-        max-width: 220px;
+        max-width: 200px;
     }
 }
 
 @media (max-width: 480px) {
     .whatsapp-button {
-        width: 50px;
-        height: 50px;
+        min-width: 160px;
+        padding: var(--spacing-2) var(--spacing-3);
+        font-size: 13px;
         bottom: var(--spacing-4);
         right: var(--spacing-3);
-        font-size: 22px;
+        gap: var(--spacing-1);
+    }
+    
+    .whatsapp-text {
+        font-size: 11px;
     }
     
     .whatsapp-menu {
         right: var(--spacing-3);
-        max-width: 200px;
+        max-width: 160px;
+    }
+}
+        max-width: 180px;
     }
 }

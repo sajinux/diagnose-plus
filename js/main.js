@@ -161,35 +161,50 @@ function initWhatsApp() {
         general: 'Hi! I have a question about Diagnose Plus services.'
     };
 
-    // Create WhatsApp button
-    const whatsappButton = document.createElement('button');
+    // Create WhatsApp button with label and menu toggle inside
+    const whatsappButton = document.createElement('a');
     whatsappButton.className = 'whatsapp-button';
-    whatsappButton.innerHTML = '💬';
-    whatsappButton.title = 'Contact via WhatsApp';
+    whatsappButton.innerHTML = '💬 <span class="whatsapp-text">Book an Appointment</span> <button class="whatsapp-menu-toggle" style="pointer-events: all;">⋮</button>';
+    whatsappButton.href = '#';
+    whatsappButton.title = 'Book appointment via WhatsApp';
     
-    // Create menu
+    // Create menu for other options
     const whatsappMenu = document.createElement('div');
     whatsappMenu.className = 'whatsapp-menu';
     whatsappMenu.innerHTML = `
-        <div class="whatsapp-menu-header">Select Service</div>
-        <button class="whatsapp-menu-item" data-message="booking">📅 Book Appointment</button>
-        <button class="whatsapp-menu-item" data-message="parts">⚙️ Order Spare Parts</button>
-        <button class="whatsapp-menu-item" data-message="training">🎓 Technical Training</button>
-        <button class="whatsapp-menu-item" data-message="general">💬 General Inquiry</button>
+        <div class="whatsapp-menu-header">Other Services</div>
+        <a href="#" class="whatsapp-menu-item" data-message="parts">⚙️ Order Spare Parts</a>
+        <a href="#" class="whatsapp-menu-item" data-message="training">🎓 Technical Training</a>
+        <a href="#" class="whatsapp-menu-item" data-message="general">💬 General Inquiry</a>
     `;
     
     document.body.appendChild(whatsappButton);
     document.body.appendChild(whatsappMenu);
     
-    // Toggle menu
+    // Direct booking on main button click
     whatsappButton.addEventListener('click', function(e) {
+        // Only open WhatsApp if clicking on text, not the toggle button
+        if (!e.target.closest('.whatsapp-menu-toggle')) {
+            e.preventDefault();
+            const message = messages.booking;
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            window.open(whatsappURL, '_blank');
+        }
+    });
+    
+    // Toggle menu with the button inside
+    const menuToggle = whatsappButton.querySelector('.whatsapp-menu-toggle');
+    menuToggle.addEventListener('click', function(e) {
         e.preventDefault();
+        e.stopPropagation();
         whatsappMenu.classList.toggle('active');
     });
     
     // Handle menu item clicks
     document.querySelectorAll('.whatsapp-menu-item').forEach(item => {
-        item.addEventListener('click', function() {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
             const messageType = this.getAttribute('data-message');
             const message = messages[messageType] || messages.general;
             const encodedMessage = encodeURIComponent(message);
@@ -201,7 +216,7 @@ function initWhatsApp() {
     
     // Close menu when clicking outside
     document.addEventListener('click', function(e) {
-        if (!e.target.closest('.whatsapp-button') && !e.target.closest('.whatsapp-menu')) {
+        if (!e.target.closest('.whatsapp-menu-toggle') && !e.target.closest('.whatsapp-menu')) {
             whatsappMenu.classList.remove('active');
         }
     });
